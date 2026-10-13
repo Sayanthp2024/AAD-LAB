@@ -9,7 +9,8 @@ void quicksort(int a[], int l, int h) {
         for (int j = l; j < h; j++) {
             if (a[j] <= p) {
                 i++;
-                t = a[i]; a[i] = a[j]; a[j] = t;
+                t = a[i]; a[i] = a[j]; 
+                a[j] = t;
             }
         }
 
