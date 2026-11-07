@@ -9,7 +9,7 @@ int max(int a, int b)
 int main()
 {
     int n, W, i, w;
-    int wt[10], val[10], dp[11][101];
+    int wt[11], val[11], dp[11][101];
 
     printf("Enter number of items: ");
     scanf("%d", &n);
@@ -41,7 +41,8 @@ int main()
 
     printf("\nMaximum value = %d", dp[n][W]);
 
-    printf("\nSelected weights: ");
+    // Print selected items
+    printf("\nSelected items: ");
 
     w = W;
 
@@ -49,7 +50,7 @@ int main()
     {
         if(dp[i][w] != dp[i-1][w])
         {
-            printf("%d ", wt[i]);
+            printf("Item %d ", i);
             w = w - wt[i];
         }
     }
